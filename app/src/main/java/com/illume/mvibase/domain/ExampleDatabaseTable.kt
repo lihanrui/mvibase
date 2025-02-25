@@ -1,0 +1,14 @@
+package com.illume.mvibase.domain
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "example_table")
+data class ExampleDatabaseTable(
+    @PrimaryKey(autoGenerate = true)
+    var id: Int = 0,
+
+    /*
+     * Add additional data columns:
+     */
+)
