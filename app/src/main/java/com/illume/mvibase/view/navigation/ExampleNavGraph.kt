@@ -5,8 +5,8 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.NavHost
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
-import com.illume.mvibase.view.screen.Example2Route
-import com.illume.mvibase.view.screen.ExampleRoute
+import com.illume.mvibase.view.screens.Example2Route
+import com.illume.mvibase.view.screens.ExampleRoute
 
 @Composable
 fun ExampleNavGraph(navController: NavHostController) {

@@ -1,7 +1,7 @@
-package com.illume.mvibase.domain.repository
+package com.illume.mvibase.domain
 
-import com.illume.mvibase.database.ExampleDao
-import com.illume.mvibase.domain.ExampleDatabaseTable
+import com.illume.mvibase.data.ExampleDao
+import com.illume.mvibase.data.ExampleDatabaseTable
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOn

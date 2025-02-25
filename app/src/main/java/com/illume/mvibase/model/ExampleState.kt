@@ -1,6 +1,6 @@
 package com.illume.mvibase.model
 
-import com.illume.mvibase.domain.ExampleDatabaseTable
+import com.illume.mvibase.data.ExampleDatabaseTable
 
 data class ExampleState(
     val db_objects: List<ExampleDatabaseTable> = emptyList<ExampleDatabaseTable>(),

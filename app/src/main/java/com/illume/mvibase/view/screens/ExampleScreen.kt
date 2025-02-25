@@ -1,5 +1,4 @@
-package com.illume.mvibase.view.screen
-
+package com.illume.mvibase.view.screens
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,34 +10,27 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.illume.mvibase.intent.ExampleIntent
+import com.illume.mvibase.model.ExampleIntent
 import com.illume.mvibase.view.theme.MVIBaseTheme
 import com.illume.mvibase.viewmodel.ExampleViewModel
 import org.koin.androidx.compose.koinViewModel
 
 /*
- *  Secondary screen to demonstrate navigation between screens.
- *  You may want to implement your own ViewModel and instantiate that here.
+ *  Primary screen. This screen is initially loaded by ExampleNavGraph's NavHost call
  */
 @Composable
-fun Example2Route(
-    navigateToExample: () -> Unit,
-    popBackStack: () -> Boolean
+fun ExampleRoute(
+    navigateToExample2: () -> Unit
 ) {
     val viewModel: ExampleViewModel = koinViewModel()
-    Example2Screen(viewModel, navigateToExample, popBackStack)
+    ExampleScreen(viewModel, navigateToExample2)
 }
 
 
 @Composable
-fun Example2Screen(
-    viewModel: ExampleViewModel,
-    navigateToExample: () -> Unit,
-    popBackStack: () -> Boolean
-) {
-    // A duplicate of ExampleScreen.
-    // Modify this to your own UI for a secondary screen, and scale from there.
+fun ExampleScreen(viewModel: ExampleViewModel, navigateToExample2: () -> Unit) {
     MVIBaseTheme {
         Scaffold(
             bottomBar = {
@@ -48,26 +40,42 @@ fun Example2Screen(
                             viewModel.processIntent(
                                 intent = ExampleIntent.ExampleButtonClicked
                             )
-                            navigateToExample()
+                            navigateToExample2()
                         },
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text("Go to first screen")
+                        Text("Go to second screen")
                     }
                 }
             }
         ) { innerPadding ->
-            // Content for most of your screen
+            // Content for most of the screen
             Box(
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(innerPadding)
             ) {
                 Greeting(
-                    txt = " Screen 2",
+                    txt = " Screen 1",
                     modifier = Modifier.padding(16.dp)
                 )
             }
         }
+    }
+}
+
+@Composable
+fun Greeting(txt: String = "", modifier: Modifier = Modifier) {
+    Text(
+        text = "This is $txt!",
+        modifier = modifier
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+fun GreetingPreview() {
+    MVIBaseTheme {
+        Greeting("a greeting preview")
     }
 }

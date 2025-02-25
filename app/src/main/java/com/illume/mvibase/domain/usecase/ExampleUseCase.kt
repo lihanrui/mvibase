@@ -1,6 +1,7 @@
-package com.illume.mvibase.domain
+package com.illume.mvibase.domain.usecase
 
-import com.illume.mvibase.domain.repository.ExampleRepository
+import com.illume.mvibase.data.ExampleDatabaseTable
+import com.illume.mvibase.domain.ExampleRepository
 import kotlinx.coroutines.flow.Flow
 
 class ExampleUseCase(private val repository: ExampleRepository) {

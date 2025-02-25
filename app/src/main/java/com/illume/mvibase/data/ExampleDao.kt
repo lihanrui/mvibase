@@ -1,8 +1,7 @@
-package com.illume.mvibase.database
+package com.illume.mvibase.data
 
 import androidx.room.Dao
 import androidx.room.Query
-import com.illume.mvibase.domain.ExampleDatabaseTable
 import kotlinx.coroutines.flow.Flow
 
 @Dao

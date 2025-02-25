@@ -1,4 +1,4 @@
-package com.illume.mvibase.domain
+package com.illume.mvibase.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

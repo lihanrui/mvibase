@@ -1,9 +1,9 @@
-package com.illume.mvibase.database.local
+package com.illume.mvibase.data.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.illume.mvibase.database.ExampleDao
-import com.illume.mvibase.domain.ExampleDatabaseTable
+import com.illume.mvibase.data.ExampleDao
+import com.illume.mvibase.data.ExampleDatabaseTable
 
 val EXAMPLE_DB_NAME = "Your Database Name here"
 

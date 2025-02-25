@@ -1,4 +1,4 @@
-package com.illume.mvibase.intent
+package com.illume.mvibase.model
 
 sealed class ExampleIntent {
     data object ExampleButtonClicked : ExampleIntent()
