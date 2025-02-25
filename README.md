@@ -1,6 +1,7 @@
 # mvibase
 A multi-screen MVI sample project with NavController using Jetpack Compose and Clean Architecture principles.
 
+![App Screenshot](https://github.com/lihanrui/mvibase/blob/main/app/mvibase_screenshot.png))
 
 # Motivation
 Many MVI template projects on GitHub lack integration with the latest Jetpack features. This project aims to provide a comprehensive starting point for mobile app developers, allowing them to quickly launch a multi-screen application and move from concept to implementation efficiently.
